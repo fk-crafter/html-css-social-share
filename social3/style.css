@@ -1,0 +1,73 @@
+body {
+    height: 100vh;
+    background: pink;
+}
+
+.icons {
+    gap: 10px;
+}
+
+.icon {
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.icon i {
+    z-index: 2;
+}
+
+.backfilter {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.3s ease;
+}
+
+.fb {
+    background-color: #405de6;
+}
+
+.ig {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+}
+
+.yt {
+    background-color: #ff0000;
+}
+
+.gh {
+    background-color: #24292e;
+}
+
+.icon:hover .backfilter {
+    animation: raiseUp 0.5s ease forwards;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes raiseUp {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+    100% {
+        opacity: 1;
+        height: 100%;
+    }
+}
